@@ -9,7 +9,7 @@ const Component2 = () => {
     return (
     <div className="border p-2 m-2">
         <h3>Component2</h3>
-        <RerenderCounter name="Component 2" />
+        <RerenderCounter name="Component2" />
         <pre>
             JSON
             {JSON.stringify(data, null, 2)}
