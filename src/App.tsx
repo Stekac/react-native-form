@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import { useReducer, useState } from 'react';
 import './App.css';
+import Component1 from './Component1';
+import { useForm } from './react-native-form';
+import Hidden from './react-native-form/Hidden';
 
 function App() {
+  const [, rerender] = useReducer(() => ({}), {});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container mx-auto px-4'>
+
+      <Component1 />
+      <button className='rounded border-black' onClick={rerender}>Rerender</button>
+
+
+      <Hidden id="my-first" />
     </div>
   );
 }
