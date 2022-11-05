@@ -25,7 +25,6 @@ const state = new Proxy(_state, {
 });
 
 const updateFormContainer = (id: string) => {
-    debugger;
     const form = state.forms[id];
     const container = state.containers[id];
 
@@ -89,7 +88,6 @@ const subscribe = (id: ID, subscriber: Subscriber) => {
 }
 
 const notifySubscribers = (id: ID) => {
-  debugger
   const data = extractFormData(state.forms[id]);
   const subscribers = state.subscribers[id];
 
